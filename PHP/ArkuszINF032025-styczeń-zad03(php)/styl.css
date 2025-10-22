@@ -1,0 +1,61 @@
+body{
+    font-family: serif;
+}
+#naglowek{
+   background-color: indigo;
+   color: white;
+   padding: 10px;
+   text-align: center;
+}
+#napis{
+    background-color: blueviolet;
+    padding: 10px;
+    text-align: right;
+}
+#blokL{
+float: left;
+background-color: lavender;
+height: 500px;
+width: 25%;
+}
+#blokS{
+float: left;
+background-color: ghostwhite;
+text-align: center;
+height: 500px;
+width: 40%;
+}
+#blokP{
+float: left;
+background-color: lavender;
+height: 500px;
+width: 35%;
+}
+#stopka{
+    clear: both;
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+img{
+    width: 50%;
+    padding: 10px;
+}
+p{
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+}
+table,td,th{
+    padding: 30px;
+    border: solid 1px indigo;
+    border-collapse: collapse;
+    
+}
+td,th{
+    padding: 3px;
+}
+form{
+    padding: 30px;
+}
