@@ -1,3 +1,6 @@
+<?php
+$polaczenie=mysqli_connect("localhost","root","","kalendarz");
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -12,6 +15,12 @@
     </header>
     <section id="napis">
         <p>skrypt1</p>
+        <?php
+        $zmienna="CURDATE(mm-dd)";
+        $zapytanie="Select imiona from imieniny where data='$zmienna' ";
+        $wynik=mysqli_query($polaczenie,$zapytanie);
+        
+        ?>
     </section>
      <section id="blokL">
         <table>
@@ -88,3 +97,7 @@
     </footer>
 </body>
 </html>
+<?php
+mysqli_close($polaczenie);
+
+?>
