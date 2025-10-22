@@ -14,13 +14,29 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
         <h1>Dni, miesiące, lata...</h1>
     </header>
     <section id="napis">
-        <p>skrypt1</p>
+        <p>Dzisiaj jest 
         <?php
-        $zmienna="CURDATE(mm-dd)";
-        $zapytanie="Select imiona from imieniny where data='$zmienna' ";
+        $zmienna="SELECT DATE_FORMAT(CURRENT_DATE(),'%m-%d')as data";
+        $zmienna2=mysqli_query($polaczenie,$zmienna);
+        $zmienna3=mysqli_fetch_assoc($zmienna2);
+        $zmienna4=$zmienna3['data'];
+        
+        $zapytanie="SELECT imiona FROM imieniny WHERE data='$zmienna4'";
         $wynik=mysqli_query($polaczenie,$zapytanie);
+        $ile=mysqli_num_rows($wynik);
+        if($ile>0){
+            $tab=mysqli_fetch_assoc($wynik);
+            for($i=0;$i<$ile;$i++)
+            {
+                echo $tab["imiona"];
+            }
+        }
+        else{
+            echo"brak";
+        }
         
         ?>
+        </p>
     </section>
      <section id="blokL">
         <table>
