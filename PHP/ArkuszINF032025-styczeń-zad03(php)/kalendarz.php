@@ -16,7 +16,18 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
     <section id="napis">
         <p>Dzisiaj jest 
         <?php
-        $data= date("Y-m-d");
+       
+        $data1= date("Y-m-d");
+        $dni = [
+            'Monday' => 'Poniedziałek',
+            'Tuesday' => 'Wtorek',
+            'Wednesday' => 'Środa',
+            'Thursday' => 'Czwartek',
+            'Friday' => 'Piątek',
+            'Saturday' => 'Sobota',
+            'Sunday' => 'Niedziela'
+            ];
+            $data2=date('l');
         $zmienna="SELECT DATE_FORMAT(CURRENT_DATE(),'%m-%d')as data";
         $zmienna2=mysqli_query($polaczenie,$zmienna);
         $zmienna3=mysqli_fetch_assoc($zmienna2);
@@ -27,7 +38,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
         $ile=mysqli_num_rows($wynik);
         if($ile>0){
             $tab=mysqli_fetch_assoc($wynik);
-            echo $data. ", imieniny ";
+            echo $data1." ".$dni[$data2]. ", imieniny ";
             for($i=0;$i<$ile;$i++)
             {
                 echo $tab["imiona"];
@@ -99,10 +110,13 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
                 $data= date("m-d", strtotime($data));
                 $zapytanie2="SELECT imiona FROM imieniny WHERE data=$data";
                 $wynik2=mysqli_query($polaczenie,$zapytanie2);
-                $imieniny=mysqli_fetch_assoc($wynik2);
                 if(mysqli_num_rows($wynik2)>0)
-                {
-                echo "Dnia ".$data." są imieniny: ".$imieniny['imiona'];
+                { 
+                    $imieniny=mysqli_fetch_assoc($wynik2);
+                    echo "Dnia ".$data." są imieniny: ".$imieniny['imiona'];
+                }
+                else{
+                    echo $data;
                 }
                 
 
