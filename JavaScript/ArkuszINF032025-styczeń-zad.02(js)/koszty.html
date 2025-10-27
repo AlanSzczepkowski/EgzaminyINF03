@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="naglowek">
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+    <nav id="menu">
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator Kosztów</a>
+    </nav>
+    <main id="glowny">
+        <h1>Kalkulator kosztów montażu</h1>
+        
+            <label for="">Szerokość pomieszczenia [m]:</label>
+            <input type="number" name="" id="szerokosc">
+             <label for="">Długość pomieszczenia [m]:</label>
+            <input type="number" name="" id="dlugosc">
+            <p>Typ paneli</p>
+            <input type="radio" name="panel" id="pl">Panele laminowane <br>
+            <input type="radio" name="panel" id="pw">Panele winylowe <br>
+            <input type="radio" name="panel" id="d">Deska podłogowa <br>    
+            <input type="submit"  value="oblicz" onclick="Oblicz()">
+        
+        <script>
+            function Oblicz(){
+                var szerokosc=document.getElementById("szerokosc").value;
+                var dlugosc=document.getElementById("dlugosc").value;
+                var pl=12;
+                var pw=14;
+                var d=18;
+                var wynik=szerokosc*dlugosc;
+                var koszt=0;
+                if(szerokosc!=0||dlugosc!=0)
+                {
+                    if(document.getElementById("pl").checked==true)
+                    {
+                        koszt=pl*wynik;
+                        document.getElementById("wynik").innerHTML=" Pole powierzchni pomieszczenia:"+ wynik+" koszt montażu " +koszt;
+                    }
+                    else if(document.getElementById("pw").checked==true)
+                    {
+                        koszt=pw*wynik;
+                        document.getElementById("wynik").innerHTML=" Pole powierzchni pomieszczenia:"+ wynik+" koszt montażu " +koszt;
+                    }
+                    else if(document.getElementById("d").checked==true)
+                    {
+                        koszt=d*wynik;
+                        document.getElementById("wynik").innerHTML=" Pole powierzchni pomieszczenia:"+ wynik+" koszt montażu " +koszt;
+                    }
+                    else
+                    {
+                        document.getElementById("wynik").innerHTML="Nie wybrano materiału";
+                    }
+                }
+                else
+                {
+                     document.getElementById("wynik").innerHTML="Wprowadź poprawne dane.";
+                }
+
+            }
+        </script>
+        <p id="wynik"></p>
+    </main>
+    <footer id="stopka">
+        <h5>Autor Strony:XYZ</h5>
+    </footer>
+</body>
+</html>
