@@ -131,17 +131,21 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
       <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="kalendarz01.gif" alt="Kalendarz Majów"></a> 
        <h2>Rodzaje kalendarzy</h2>
        <ol>
-        <li>słoneczny</li>
+        <li>słoneczny
+        
             <ul>
                 <li>Kalendarz Majów</li>
                 <li>juliański</li>
                 <li>gregorjański</li>
             </ul>
-            <li>księżycowy</li>
+        </li>
+            <li>księżycowy
+        
             <ul>
                 <li>starogrecki</li>
                 <li>babiloński</li>
             </ul>
+        </li>
        </ol>
         
     </section>

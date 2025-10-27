@@ -41,6 +41,7 @@ width: 35%;
 
 img{
     width:50%;
+    height: auto; 
     padding: 10px;
     float: right;
 }
