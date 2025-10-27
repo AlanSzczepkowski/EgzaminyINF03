@@ -128,7 +128,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
         ?>
     </section>
      <section id="blokP">
-      
+      <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="kalendarz01.gif" alt="Kalendarz Majów"></a> 
        <h2>Rodzaje kalendarzy</h2>
        <ol>
         <li>słoneczny</li>
@@ -143,7 +143,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
                 <li>babiloński</li>
             </ul>
        </ol>
-        <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="kalendarz01.gif" alt="Kalendarz Majów"></a> 
+        
     </section>
     <footer id="stopka">
         <p>Stronę opracował: XYZ</p>
