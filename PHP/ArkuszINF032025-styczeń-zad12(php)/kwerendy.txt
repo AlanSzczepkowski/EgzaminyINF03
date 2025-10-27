@@ -1,4 +1,8 @@
+Zapytanie1:
 SELECT Rodzaj,Nazwa,Gramatura,Cena FROM wyroby WHERE Rodzaj="INNE";
+Zapytanie2:
 SELECT DISTINCT Rodzaj FROM wyroby GROUP BY Rodzaj DESC;
+Zapytanie3:
 SELECT ID,Nazwa FROM wyroby WHERE nazwa	LIKE "%Chałka%";
+Zapytanie4:
 SELECT Rodzaj, AVG(Cena) as "Średnia cena" from wyroby GROUP BY Rodzaj;
