@@ -107,8 +107,8 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
             if(isset($_POST['data']))
             {
                 $data=$_POST['data'];
-                $data= date("m-d", strtotime($data));
-                $zapytanie2="SELECT imiona FROM imieniny WHERE data=$data";
+                $data2= date("m-d", strtotime($data));
+                $zapytanie2="SELECT imiona FROM imieniny WHERE data='$data2'";
                 $wynik2=mysqli_query($polaczenie,$zapytanie2);
                 if(mysqli_num_rows($wynik2)>0)
                 { 
@@ -128,7 +128,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
         ?>
     </section>
      <section id="blokP">
-       <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="" alt="Kalendarz Majów"> </a> 
+      
        <h2>Rodzaje kalendarzy</h2>
        <ol>
         <li>słoneczny</li>
@@ -143,6 +143,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
                 <li>babiloński</li>
             </ul>
        </ol>
+        <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="kalendarz01.gif" alt="Kalendarz Majów"></a> 
     </section>
     <footer id="stopka">
         <p>Stronę opracował: XYZ</p>
