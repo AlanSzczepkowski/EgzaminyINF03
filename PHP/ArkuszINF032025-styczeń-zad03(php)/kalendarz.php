@@ -16,6 +16,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
     <section id="napis">
         <p>Dzisiaj jest 
         <?php
+        $data= date("Y-m-d");
         $zmienna="SELECT DATE_FORMAT(CURRENT_DATE(),'%m-%d')as data";
         $zmienna2=mysqli_query($polaczenie,$zmienna);
         $zmienna3=mysqli_fetch_assoc($zmienna2);
@@ -26,6 +27,7 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
         $ile=mysqli_num_rows($wynik);
         if($ile>0){
             $tab=mysqli_fetch_assoc($wynik);
+            echo $data. ", imieniny ";
             for($i=0;$i<$ile;$i++)
             {
                 echo $tab["imiona"];
@@ -87,9 +89,29 @@ $polaczenie=mysqli_connect("localhost","root","","kalendarz");
      <section id="blokS">
         <h2>Sprawdź kto ma urodziny</h2>
         <form action="kalendarz.php" method="POST">
-            <input type="date" name="" id="">
+            <input type="date" name="data" id="" min="2024-01-01" max="2024-12-31">
             <input type="submit" value="Wyślij" name="" id="">
         </form>
+        <?php
+            if(isset($_POST['data']))
+            {
+                $data=$_POST['data'];
+                $data= date("m-d", strtotime($data));
+                $zapytanie2="SELECT imiona FROM imieniny WHERE data=$data";
+                $wynik2=mysqli_query($polaczenie,$zapytanie2);
+                $imieniny=mysqli_fetch_assoc($wynik2);
+                if(mysqli_num_rows($wynik2)>0)
+                {
+                echo "Dnia ".$data." są imieniny: ".$imieniny['imiona'];
+                }
+                
+
+            }
+            else{
+                echo "nie ustawiono";
+            }
+           
+        ?>
     </section>
      <section id="blokP">
        <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="" alt="Kalendarz Majów"> </a> 
