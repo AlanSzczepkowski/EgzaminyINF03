@@ -1,0 +1,67 @@
+body{
+    
+    font-family: Helvetica;
+}
+#baner{
+ 
+    background-color: #00838F;
+    color: white;
+    padding: 5px;
+    font-size: 130%;
+    text-align: center;
+    
+}
+#lewy1{
+    float: left;
+    background-color: #EFEFEF;
+    width: 55%;
+    height: 150px;
+}
+#lewy2{
+    float: left;
+    background-color: #EFEFEF;
+    width: 55%;
+    height: 300px;
+}
+#prawy{
+    float: right;
+    background-color: #4FB3BF;
+    width: 45%;
+    height: 450px;
+    text-align: center;
+}
+
+footer{
+    clear: both;
+    background-color: #00838F;
+    color: white;
+    padding: 5px;
+    font-size: 130%;
+    text-align: center;
+}
+img{
+    
+    width: 400px;
+    box-shadow: 10px 10px 7px dimgray;
+    margin: 20px;
+}
+
+#tabela{
+    
+    border-collapse: collapse;
+    margin: auto;
+    width: 80%;
+    padding: 4px;
+}
+td{
+    
+    border: 1px solid #4FB3BF;
+}
+tr{
+    
+    border: 1px solid #4FB3BF;
+}
+#j{
+    text-align: center;
+   
+}
