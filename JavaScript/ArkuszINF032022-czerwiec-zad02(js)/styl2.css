@@ -1,0 +1,71 @@
+body{
+    font-family: Cambria;
+    text-align: center;
+}
+#baner{
+    background-color: rgb(120,0,46);
+    color: white;
+    padding: 5px;
+    font-size: 150%;
+
+}
+#menu{
+    background-color: rgb(173,20,87);
+    text-align: left;
+
+}
+#lewy{
+    float: left;
+    background-color: snow;
+    color: olivedrab;
+    width: 60%;
+    height: 322px;
+    text-align: left;
+}
+#prawy{
+    float: right;
+    background-color: rgb(173,20,87);
+    width: 40%;
+    height: 322px;
+
+}
+#samochod:hover{
+    
+    border: 1px dotted yellowgreen;
+    margin: 40px;
+    padding: 10px;
+    
+}
+#home{
+    width: 80px;
+}
+#znak{
+    width: 80px;
+}
+footer{
+    clear: both;
+    background-color: rgb(120,0,46);
+    color: white;
+    padding: 5px;
+    font-size: 150%;
+}
+a{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: yellowgreen;
+}
+table{
+    border: 1px solid olivedrab;
+    width: 90%;
+}
+td{
+    border: 1px solid olivedrab;
+}
+tr{
+    border: 1px solid olivedrab;
+}
+th{
+    border: 1px solid olivedrab;
+}
