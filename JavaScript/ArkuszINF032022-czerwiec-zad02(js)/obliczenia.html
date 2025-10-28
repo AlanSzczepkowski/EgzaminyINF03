@@ -21,11 +21,35 @@
     <section id="lewy">
         <h2>Orientacyjny koszt paliwa</h2>
         <label>Rodzaj paliwa (1-benzyna, 2-olej napędowy):</label><br>
-        <input type="number"><br>
+        <input type="number" id="typ"><br>
         <label>Ile litrów?</label><br>
-        <input type="number"><br>
-        <input type="submit" name="oblicz" value="OBLICZ" id="">
-       
+        <input type="number" id="ile"><br>
+        <input type="submit" name="oblicz" value="OBLICZ" id="" onclick="Oblicz()">
+        <p id="wynik"></p>
+       <script>
+        function Oblicz(){
+            var typ=document.getElementById("typ").value;
+            var ile=document.getElementById("ile").value;
+            var wynik=0;
+            var cena=0;
+            if(typ==1)
+            {   
+                cena=4;
+                wynik=ile*cena;
+            }
+            else if(typ==2)
+            {
+                cena=3.5;
+                wynik=ile*cena;
+            }
+            else
+            {
+                wynik=cena;
+                
+            }
+            document.getElementById("wynik").innerHTML="koszt paliwa: "+wynik+"zł";;
+        }
+       </script>
     </section>
     <footer>
         <p>Stronę opracował:XYZ</p>
