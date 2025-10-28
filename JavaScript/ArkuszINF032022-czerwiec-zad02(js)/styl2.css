@@ -2,7 +2,8 @@
     font-family: Cambria;
     text-align: center;
 }
-#baner{
+#baner,#stopka{
+    clear: both;
     background-color: rgb(120,0,46);
     color: white;
     padding: 5px;
@@ -23,32 +24,18 @@
     text-align: left;
 }
 #prawy{
-    float: right;
+    float: left;
     background-color: rgb(173,20,87);
     width: 40%;
     height: 322px;
 
 }
-#samochod:hover{
-    
+#samochod:hover{  
     border: 1px dotted yellowgreen;
     margin: 40px;
-    padding: 10px;
-    
+    padding: 10px;   
 }
-#home{
-    width: 80px;
-}
-#znak{
-    width: 80px;
-}
-footer{
-    clear: both;
-    background-color: rgb(120,0,46);
-    color: white;
-    padding: 5px;
-    font-size: 150%;
-}
+
 a{
     padding-top: 0px;
     padding-bottom: 0px;
@@ -56,10 +43,10 @@ a{
     padding-right: 50px;
     color: yellowgreen;
 }
-table{
+table,td{
     border: 1px solid olivedrab;
-    width: 90%;
+   
 }
-td,th{
-    border: 1px solid olivedrab;
+table{
+    width: 90%;
 }
