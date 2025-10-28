@@ -1,7 +1,7 @@
-body{
+*{
     font-family:serif;
 }
-#baner1
+#baner1,#baner2
 {
     background-color: darkcyan;
     color: white;
@@ -10,40 +10,6 @@ body{
     letter-spacing: 15px;
     float: left;
 
-}
-#baner2
-{
-    background-color: darkcyan;
-    color: white;
-    width: 50%;
-    height: 100px;
-    letter-spacing: 15px;
-    float: left;
-}
-
-#karta1
-{
-    float: left;
-    background-color: azure;
-    width: 30%;
-    margin: 1%;
-    box-shadow: 4px 4px 8px dimgray;
-}
-#karta2
-{
-    float: left;
-    background-color: azure;
-    width: 30%;
-    margin: 1%;
-    box-shadow: 4px 4px 8px dimgray;
-}
-#karta3
-{
-    float: left;
-    background-color: azure;
-    width: 30%;
-    margin: 1%;
-    box-shadow: 4px 4px 8px dimgray;
 }
 #stopka
 {
@@ -51,7 +17,18 @@ body{
     background-color: darkcyan;
     color: white; 
 }
-
+.karta
+{
+    float: left;
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+}
+.obz
+{
+    width: 100%;
+}
 p,h2,h3
 {
     margin: 15px;
@@ -97,8 +74,4 @@ padding-right: 0px;
 {
     display: none;
     font-style: italic;
-}
-.obz
-{
-    width: 100%;
 }

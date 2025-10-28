@@ -14,7 +14,7 @@
         <h1>Nasz zespół</h1>
     </header>
     <main id="glowny">
-        <section id="karta1">
+        <section class="karta">
             <img class="obz" src="osoba1.jpg" alt="Dyrektor">
             <h2>Krzysztof Dobromilski</h2>
             <h3>Dyrektor</h3>
@@ -22,7 +22,7 @@
             <p>telefon: 111222333</p>
             <h5><a href="mailto:Krzysztof.Dobromilski@firma.pl">Kontakt</a></h5>
         </section>
-        <section id="karta2">
+        <section class="karta">
             <img class="obz" src="osoba2.jpg" alt="Kierownik logistyków">
             <h2>Joanna Trojanowska</h2>
             <h3>Kierownik logistyków</h3>
@@ -30,7 +30,7 @@
             <p>telefon: 222333444</p>
             <h5><a href="mailto:Joanna.Trojanowska@firma.pl">Kontakt</a></h5>
         </section>
-        <section id="karta3">
+        <section class="karta">
             <img class="obz" src="osoba3.jpg" alt="Kadry">
             <h2>Ewa Nowak</h2>
             <h3>Księgowość i kadry</h3>
@@ -59,24 +59,26 @@
     </footer>
 
     <script>
+            document.getElementById("cytat1").style.display="inline";
+            document.getElementById("cytat2").style.display="none";
+            document.getElementById("cytat3").style.display="none";
         function Zmien()
         {
-            var a=document.getElementById("cytat1")
-            var b=document.getElementById("cytat2")
-            var c=document.getElementById("cytat3")
+           
+            var a=document.getElementById("cytat1").style.display;
+            var b=document.getElementById("cytat2").style.display;
+            var c=document.getElementById("cytat3").style.display;
             
-            if(a.style.display=="inline")
+            if(a=="inline")
             {
                 document.getElementById("cytat1").style.display = "none";
                 document.getElementById("cytat2").style.display = "inline";
-           
-         
+
             }
-            else if(b.style.display=="inline")
+            else if(b=="inline")
             {
                 document.getElementById("cytat2").style.display = "none";
                 document.getElementById("cytat3").style.display = "inline";
-
             }
             else
             {
