@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="styl_1.css">
 </head>
 <body>
-    <nav id="baner">
+    <header id="baner">
         <h1>Portal dla wędkarzy</h1>
-    </nav>
+    </header>
     <section id="lewy1">
         <h3>Ryby zamieszkujące rzeki</h3>
          <?php
@@ -23,15 +23,15 @@
             $ile=mysqli_num_rows($wynik);
             if($ile>0)
             {
-                $tab=mysqli_fetch_array($wynik);
-                var_dump($tab);
                 echo "<ol>";
-                for($i=0;$i<$ile;$i++)
-                    {
-                     echo "<li>".$tab[0] ." pływa w rzece ". $tab[1].", ".$tab[2]."</li>";
-                      echo "<li>".$tab[1] ." pływa w rzece ". $tab[2].", ".$tab[2]."</li>";
-                    }
-                     echo "</ol>";
+                $i=0;
+                while($i<$ile)
+                {
+                    $tab=mysqli_fetch_array($wynik);  
+                    echo "<li>".$tab[0] ." pływa w rzece ". $tab[1].", ".$tab[2]."</li>";
+                    $i++;
+                }
+                echo "</ol>";
             }
             else
             {
@@ -39,10 +39,7 @@
             }
             
         ?>
-        <ol>
-            <li>Szczupak pływa w rzecze Warta-Olbrzycka, Wielkopolskie</li>
-            <li>Leszcz pływa w rzecze Przemsza k. Okradzinowa, Śląskie</li>
-        </ol>
+        
     </section>
     <section id="prawy">
         <img src="ryba1.jpg" alt="Sum"><br>
@@ -51,48 +48,43 @@
     <section id="lewy2">
         <h3>Ryby drapieżne naszych wód</h3>
          <?php
-            
+            $zapytanie2="SELECT id,nazwa,wystepowanie FROM ryby WHERE styl_zycia=1;";
+            $wynik2=mysqli_query($polaczenie,$zapytanie2);
+            $ile2=mysqli_num_rows($wynik2);
+            $i2=0;
+            if($ile2>0)
+            {
+                echo "<table>";
+                echo"<tr>";
+                echo "<th>L.p</th>";
+                echo "<th>Gatunek</th>";
+                echo "<th>Występowanie</th>";
+                echo"</tr>";
+
+                while($i2<$ile2)
+                {
+                $tab2=mysqli_fetch_array($wynik2);
                 
-            
-            
+                echo"<tr>";
+                echo "<td>".$tab2[0]."</td>";
+                echo "<td>".$tab2[1]."</td>";
+                echo "<td>".$tab2[2]."</td>";
+                echo"</tr>";
+
+                $i2++;
+                }
+                
+                echo"</table>";
+            }
+            else
+            {
+                echo "Nie ma danych";
+            }    
         ?>
-        <table id="tabela">
-           
-            <tr id="j">
-                <th>L.p.</th>
-                <th>Gatunek</th>
-                <th>Występowanie</th>
-            </tr>           
-            <tr>
-                <td>1</td>
-                <td>Szczupak</td>
-                <td>stawy,rzeki</td><br>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Sandacz</td>
-                <td>stawy,jeziora,rzeki</td><br>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Okon</td>
-                <td>rzeki</td><br>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Sum</td>
-                <td>jeziora,rzeki</td><br>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Dorsz</td>
-                <td>morze,oceany</td><br>
-            </tr>
-        </table>
     </section>
     
     <footer id="stopka">
-        <p>Stronę wykonał XYZ</p>
+        <p>Stronę wykonał: AS</p>
     </footer>
 
 </body>

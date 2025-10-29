@@ -1,9 +1,9 @@
-body{
+*{
     
     font-family: Helvetica;
 }
-#baner{
- 
+#baner,#stopka{
+    clear: both;
     background-color: #00838F;
     color: white;
     padding: 5px;
@@ -11,16 +11,15 @@ body{
     text-align: center;
     
 }
-#lewy1{
+#lewy1,#lewy2{
     float: left;
     background-color: #EFEFEF;
     width: 55%;
+}
+#lewy1{
     height: 150px;
 }
 #lewy2{
-    float: left;
-    background-color: #EFEFEF;
-    width: 55%;
     height: 300px;
 }
 #prawy{
@@ -30,38 +29,22 @@ body{
     height: 450px;
     text-align: center;
 }
-
-footer{
-    clear: both;
-    background-color: #00838F;
-    color: white;
-    padding: 5px;
-    font-size: 130%;
-    text-align: center;
-}
 img{
-    
-    width: 400px;
     box-shadow: 10px 10px 7px dimgray;
     margin: 20px;
 }
 
-#tabela{
-    
-    border-collapse: collapse;
+table,td,th{    
+    border: 1px solid #4FB3BF;
+    border-collapse: collapse; 
+}
+table{
     margin: auto;
     width: 80%;
+}
+table,th{
     padding: 4px;
 }
-td{
-    
-    border: 1px solid #4FB3BF;
-}
-tr{
-    
-    border: 1px solid #4FB3BF;
-}
-#j{
-    text-align: center;
-   
+tr:hover{
+    background-color: #4FB3BF;
 }
