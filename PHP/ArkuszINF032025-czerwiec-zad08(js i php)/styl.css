@@ -1,0 +1,55 @@
+*{
+    text-align: center;
+    font-family: Georgia;
+}
+#naglowek,#stopka{
+background-color: tomato;
+color: mistyrose;
+padding: 10px;
+clear: both;
+}
+#nawigacja{
+    width: 20%;
+    float: left;
+}
+#blok1,#blok2,#blok3{
+    background-color: #FFAEA5;
+    height: 170px;
+    font-size: 200%;
+}
+#blok1{
+    background-color: mistyrose;
+}
+#glowny{
+    background-color: mistyrose;
+    width: 80%;
+    height: 510px;
+    overflow: auto;
+    float: left;
+}
+#sekcja1{
+    display: block;
+}
+#sekcja2{
+    display: none;
+}
+#sekcja3{
+    
+    display: none;
+}
+table{
+    margin: auto;
+    width: 60%;
+    border: 1px dotted indigo;
+}
+select,input{
+    margin: 20px;
+}
+dt{
+    font-weight: bold;
+    font-style: italic;
+    
+}
+dt:hover{
+    font-size: 180%;
+}

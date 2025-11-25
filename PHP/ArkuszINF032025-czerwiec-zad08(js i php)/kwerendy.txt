@@ -1,0 +1,7 @@
+Zapytanie1:
+SELECT nazwa,dlugosc,szerokosc FROM smok WHERE pochodzenie="Polska";
+Zapytanie2:
+SELECT DISTINCT pochodzenie FROM smok ORDER BY pochodzenie ASC
+Zapytanie3:
+
+Zapytanie4:
