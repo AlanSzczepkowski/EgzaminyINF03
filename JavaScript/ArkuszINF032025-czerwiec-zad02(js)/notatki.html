@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside id="boczny">
+        <img src="obraz.jpg" alt="notatki">
+    </aside>
+    <header id="naglowek">
+        <h2>Moje zadania</h2>
+    </header>
+    <nav id="nawigacja">
+        <input type="text" name="" id="" placeholder="Dodaj zadanie">
+        <input type="submit" name="" id="" value="Dodaj" onclick="Skrypt()">
+    </nav>
+    <main id="glowny">
+        <ul>
+            <li>Wyprowadzić psa <input type="submit" name="" id="" value="wykonane"class="wykonane" onclick="Przekresl()"></li>
+            <li>Gimnastyka<input type="submit" name="" id="" value="wykonane" class="wykonane"onclick="Przekresl()"></li>
+            <li>Zakupy<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
+            <li>Spacer z kumplem<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
+            <li>Odrabianie lekcji z młodszą siostrą<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
+            <li>Projekt na geografię<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
+        </ul>
+        <script>
+            var przyciski=document.getElementsByClassName("wykonane");
+            var ile=przyciski.length
+            function Przekresl(){
+              
+                for(var i=0;i<ile;i++)
+                {   
+                    przyciski[i]
+                    
+                }
+                for(var i=0;i<ile;i++)
+                {   
+                    if(przyciski[i]==i)
+                {
+                    document.getElementsByTagName("li")[przyciski[i]].style.textDecoration="line-through";
+                }
+                    
+                }
+              // document.getElementsByTagName("li")[przyciski[i]].style.textDecoration="line-through";
+             
+                
+            }
+        </script>
+    </main>
+    <footer id="stopka">
+<h3>Notatki: AS</h3>
+    </footer>
+</body>
+</html>
