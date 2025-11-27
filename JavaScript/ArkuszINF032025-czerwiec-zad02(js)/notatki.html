@@ -29,8 +29,10 @@
         <p id="w"></p>
         <script>
             function Dodaj(){
-
+                
                 var zadanie=document.getElementById("zadanie").value;
+                if(zadanie!="")
+                {
                 var lista=document.getElementById("lista");
                 var li=document.createElement("li");
                 var przycisk=document.createElement("button");
@@ -43,6 +45,7 @@
                 }
                 li.appendChild(przycisk) 
                 lista.appendChild(li);
+                }
             }
            
             function Przekresl(x){
