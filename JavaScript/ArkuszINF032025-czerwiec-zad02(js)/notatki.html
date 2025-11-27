@@ -14,40 +14,45 @@
         <h2>Moje zadania</h2>
     </header>
     <nav id="nawigacja">
-        <input type="text" name="" id="" placeholder="Dodaj zadanie">
-        <input type="submit" name="" id="" value="Dodaj" onclick="Skrypt()">
+        <input type="text" name="" id="zadanie" placeholder="Dodaj zadanie">
+        <input type="submit" name="" id="dodaj" value="Dodaj" onclick="Dodaj()">
     </nav>
     <main id="glowny">
-        <ul>
-            <li>Wyprowadzić psa <input type="submit" name="" id="" value="wykonane"class="wykonane" onclick="Przekresl()"></li>
-            <li>Gimnastyka<input type="submit" name="" id="" value="wykonane" class="wykonane"onclick="Przekresl()"></li>
-            <li>Zakupy<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
-            <li>Spacer z kumplem<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
-            <li>Odrabianie lekcji z młodszą siostrą<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
-            <li>Projekt na geografię<input type="submit" name="" id="" value="wykonane"class="wykonane"onclick="Przekresl()"></li>
+        <ul id="lista">
+            <li>Wyprowadzić psa <button class="wykonane"onclick="Przekresl(this)">wykonane</button></li>
+            <li>Gimnastyka<button  class="wykonane"onclick="Przekresl(this)">wykonane</button></li>
+            <li>Zakupy<button class="wykonane"onclick="Przekresl(this)">wykonane</button></li>
+            <li>Spacer z kumplem<button class="wykonane"onclick="Przekresl(this)">wykonane</button></li>
+            <li>Odrabianie lekcji z młodszą siostrą<button class="wykonane"onclick="Przekresl(this)">wykonane</button></li>
+            <li>Projekt na geografię<button class="wykonane"onclick="Przekresl(this)">wykonane</button></li>
         </ul>
+        <p id="w"></p>
         <script>
-            var przyciski=document.getElementsByClassName("wykonane");
-            var ile=przyciski.length
-            function Przekresl(){
-              
-                for(var i=0;i<ile;i++)
-                {   
-                    przyciski[i]
-                    
-                }
-                for(var i=0;i<ile;i++)
-                {   
-                    if(przyciski[i]==i)
+            function Dodaj(){
+
+                var zadanie=document.getElementById("zadanie").value;
+                var lista=document.getElementById("lista");
+                var li=document.createElement("li");
+                var przycisk=document.createElement("button");
+                li.textContent=zadanie+" ";
+                przycisk.textContent="wykonane";
+                przycisk.className="wykonane";
+                przycisk.onclick=function()
                 {
-                    document.getElementsByTagName("li")[przyciski[i]].style.textDecoration="line-through";
+                    Przekresl(this);
                 }
-                    
-                }
-              // document.getElementsByTagName("li")[przyciski[i]].style.textDecoration="line-through";
+                li.appendChild(przycisk) 
+                lista.appendChild(li);
+            }
+           
+            function Przekresl(x){
+               var li=x.parentElement;
+                li.style.textDecoration="line-through";
+            
              
                 
             }
+              // document.getElementsByTagName("li")[0].style.textDecoration="line-through";
         </script>
     </main>
     <footer id="stopka">
