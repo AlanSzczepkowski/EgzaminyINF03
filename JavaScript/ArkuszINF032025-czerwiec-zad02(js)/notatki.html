@@ -33,23 +33,23 @@
                 var zadanie=document.getElementById("zadanie").value;
                 if(zadanie!="")
                 {
-                var lista=document.getElementById("lista");
-                var li=document.createElement("li");
-                var przycisk=document.createElement("button");
-                li.textContent=zadanie+" ";
-                przycisk.textContent="wykonane";
-                przycisk.className="wykonane";
-                przycisk.onclick=function()
-                {
-                    Przekresl(this);
-                }
-                li.appendChild(przycisk) 
-                lista.appendChild(li);
+                    var lista=document.getElementById("lista");
+                    var li=document.createElement("li");
+                    var przycisk=document.createElement("button");
+                    li.textContent=zadanie+" ";
+                    przycisk.textContent="wykonane";
+                    przycisk.className="wykonane";
+                    przycisk.onclick=function()
+                    {
+                        Przekresl(this);
+                    }
+                    li.appendChild(przycisk) 
+                    lista.appendChild(li);
                 }
             }
            
             function Przekresl(x){
-               var li=x.parentElement;
+                var li=x.parentElement;
                 li.style.textDecoration="line-through";
             
              
