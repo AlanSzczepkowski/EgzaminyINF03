@@ -94,6 +94,9 @@ $polaczenie=mysqli_connect("localhost","root","","smoki");
                     if($ile>0)
                     {
                         echo"<table>";
+                        echo"<th>Nazwa</th>";
+                        echo"<th>Długość</th>";
+                        echo"<th>Szerokość</th>";
                         $i=0;
                         while($i<$ile){
                             $tab2=mysqli_fetch_assoc($wynik2);

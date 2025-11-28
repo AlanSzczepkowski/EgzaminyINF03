@@ -1,0 +1,7 @@
+Zapytanie1:
+Zapytanie2:
+SELECT nazwa_firmy,liczba_pracownikow FROM wykonawcy WHERE liczba_pracownikow >=40;
+Zapytanie3:
+SELECT DISTINCT miasto FROM klienci ORDER BY miasto ASC;
+Zapytanie4:
+SELECT klienci.imie,zlecenia.cena FROM klienci JOIN zlecenia ON klienci.id_klienta=zlecenia.id_klienta WHERE klienci.miasto="Poznań" AND rodzaj="malowanie";
