@@ -6,7 +6,7 @@ $polaczenie=mysqli_connect("localhost","root","","remonty");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remontyt</title>
+    <title>Remonty</title>
     <link rel="stylesheet" href="styl.css">
 </head>
 <body>

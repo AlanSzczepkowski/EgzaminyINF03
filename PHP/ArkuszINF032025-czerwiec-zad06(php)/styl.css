@@ -1,0 +1,33 @@
+*{
+    font-family: Cambria;
+}
+body{
+    background-color: mistyrose;
+}
+#naglowek,#stopka{
+height: 200px;
+text-align: center;
+overflow: hidden;
+clear: both;
+}
+.sekcja{
+    background-color: plum;
+    height: 400px;
+    margin: 5px;
+    box-shadow: 4px 4px 10px dimgray;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+}
+@media(min-width:801px){
+    .sekcja{
+        width: 22%;
+    }
+}
+h2{
+    text-align: center;
+}
+input:hover{
+    background-color: #505050;
+    color: white;
+}

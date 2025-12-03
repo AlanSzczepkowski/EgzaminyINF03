@@ -1,0 +1,10 @@
+Zapytanie1:
+SELECT id, tytul FROM ksiazka WHERE gatunek='liryka';
+Zapytanie2:
+SELECT ksiazka.tytul, wypozyczenia.id_wyp, wypozyczenia.data_odd FROM ksiazka JOIN wypozyczenia ON ksiazka.id=wypozyczenia.id_ks ORDER BY data_odd ASC
+Zapytanie3:
+ALTER TABLE ksiazka ADD COLUMN rezerwacja TINYINT(1) DEFAULT 0;
+Zapytanie4:
+UPDATE ksiazka SET rezerwacja=1 WHERE id=1;
+Zapytanie5:
+SELECT tytul FROM ksiazka WHERE id=4;
