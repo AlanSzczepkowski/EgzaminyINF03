@@ -4,15 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
 </head>
 <body>
+    <script>
+        function Chat(){
+            var         tekst=document.getElementById("tekst").value;
+            var chat=document.getElementById("chat");
+            
+            var sekcja=document.createElement("section");
+            var img=document.createElement("img");
+            var p=document.createElement("p");
+
+            sekcja.classList.add("box");
+            sekcja.id="b1";
+            img.src="Jolka.jpg";
+            p.innerHTML=tekst;
+
+            sekcja.appendChild(img);
+            sekcja.appendChild(p);
+            chat.appendChild(sekcja);
+                       sekcja.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+            });
+        }
+        function Losowy(){
+           var tab=["Świetnie!",
+                    "Kto gra główną rolę?",
+                    "Lubisz filmy Tego reżysera?",
+                    "Będę 10 minut wcześniej",
+                    "Może kupimy sobie popcorn?",
+                    "Ja wolę Colę",
+                    "Zaproszę jeszcze Grześka",
+                    "Tydzień temu też byłem w kinie na Diunie",
+                    "Ja funduję bilety"];
+var a=Math.floor(Math.random()*9);
+
+            var chat=document.getElementById("chat");
+            
+            var sekcja=document.createElement("section");
+            var img=document.createElement("img");
+            var p=document.createElement("p");
+
+            sekcja.classList.add("box");
+            sekcja.id="b2";
+            img.src="Krzysiek.jpg";
+            p.innerHTML=tab[a];
+
+            sekcja.appendChild(img);
+            sekcja.appendChild(p);
+            chat.appendChild(sekcja);
+            sekcja.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+            });
+          
+        }
+    </script>
     <header id="baner">
         <h2>Chat</h2>
     </header>
-    <main id="glowny">
-        <h3>Chaty</h3>
-    </main>
+       
     <aside id="boczny">
+         <h3>Chaty</h3>
         <ul>
             <li> Ogólny</li>
             <li> Tematyczne
@@ -30,8 +85,22 @@
         <p>Krzysztof Łukasiński</p>
         <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
     </aside>
+ <main id="glowny">
+       <section id="chat">
+            <section id="b1">
+                <img src="Jolka.jpg" alt=""><p id="j">Cześć idziesz jutro do kina</p>
+            </section>
+            <section id="b2">
+                <img src="Krzysiek.jpg" alt=""><p id="k">Tak! A ty?</p>
+        </section>
+        
+       </section>
+       <label for="">Wpisz wiadomość</label>
+            <input type="text" id="tekst"> <button name="" id="" value="Wyślij" onclick="Chat()">Wyślij</button><br>
+            <button name="" id="" value="Generuj losową odpoweidź" onclick="Losowy()">Generuj losową odpowiedź</button> 
+    </main>
     <footer id="stopka">
-
+<h5>Chat wykonał: AS</h5>
     </footer>
 </body>
 </html>

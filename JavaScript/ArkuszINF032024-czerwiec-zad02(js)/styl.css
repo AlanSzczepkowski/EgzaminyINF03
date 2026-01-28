@@ -1,0 +1,73 @@
+*{
+    font-family: Garamond;
+}
+#baner{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    float: left;
+}
+#glowny{
+    width: 80%;
+    height: 600px;
+float: left;
+}
+#boczny{
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+    float: right;
+
+}
+#stopka{
+    clear: both;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+img{
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+#chat{
+    border: solid 1px tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: auto;
+}
+#b1,#b2{
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+}
+#b1{
+    background-color: #eee;
+}
+#b1 img{
+    float: left;
+}
+#b2{
+    background-color: #ccc;
+    text-align: right;
+    
+}
+#b2 img{
+    float: right;
+}
+button{
+    clear: both;
+    background-color: tomato;
+    border: solid 1px darkred;
+    padding: 5px;
+    font-weight: bold;
+}
+input{
+    clear: both;
+    width: 500px;
+}
