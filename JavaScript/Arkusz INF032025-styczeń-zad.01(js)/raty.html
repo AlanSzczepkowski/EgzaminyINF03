@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy komputerowe</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="naglowek">
+<img src="baner.png" alt="kursy komputerowe">
+
+    </header>
+    <nav id="menu">
+<a href="index.html">Strona główna</a>
+<a href="raty.html">Koszt rat</a>
+<a href="https://moje-szkolenia.pl/"> Nasz partner</a>
+    </nav>
+    <main id="glowny">
+        <h3>Oblicz miesięczną ratę</h3>
+        <input type="checkbox" class="kontrolki" name="kurs" id="r">Kurs React.js <br>
+        <input type="checkbox" class="kontrolki" name="kurs" id="js">Kurs JavaScript <br>
+        Liczba rat:
+        <input type="number" class="kontrolki" name="" id="raty"><br>
+        <select class="kontrolki" name="" id="miasto">
+            <option value="">Warszawa</option>
+            <option value="">Katowice</option>
+            <option value="">Gdańsk</option>
+        </select><br>
+        <input type="submit" value="Oblicz" class="kontrolki" id="oblicz" onclick="Oblicz()">
+        <p id="wynik"></p>
+        <script>
+            function Oblicz(){
+                var kurs1=document.getElementById("r").checked;
+                var kurs2=document.getElementById("js").checked;
+                var raty=document.getElementById("raty").value;
+                var miasto=document.getElementById("miasto").value;
+                var kosz=0;
+                var cena=0;
+                var wypisz=document.getElementById("wynik");
+            if(kurs1==true){
+                cena=5000;
+                koszt=cena/raty;
+                wypisz.innerHTML="Kurs odbędzie się w "+miasto+". Koszt całkowity: "+cena+" zł. Płacisz "+ raty+ " rat po "+koszt+" zł";
+            }
+            else if(kurs2==true)
+            {
+                cena=3000;
+                koszt=cena/raty;
+                wypisz.innerHTML="Kurs odbędzie się w "+miasto+". Koszt całkowity: "+cena+" zł. Płacisz "+ raty+ " rat po "+koszt+" zł";
+            }
+                  else if(kurs1==true&&kurs2==true)
+            {
+                cena=5000+3000;
+                koszt=cena/raty;
+                wypisz.innerHTML="Kurs odbędzie się w "+miasto+". Koszt całkowity: "+cena+" zł. Płacisz "+ raty+ " rat po "+koszt+" zł";
+            }
+            else{
+                
+            }
+            }
+        </script>
+    </main>
+    <footer id="stopka">
+        <p>Autor strony: AS</p>
+    </footer>
+</body>
+</html>
