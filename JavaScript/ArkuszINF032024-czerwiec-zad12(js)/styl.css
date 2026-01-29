@@ -1,0 +1,49 @@
+*{
+    font-family: Century,serif;
+    text-align: center;
+}
+#baner,#stopka{
+    background-color: indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    clear: both;
+}
+#blok1,#blok2,#blok3,#blok4{
+    width: 50%;
+    height: 470px;
+}
+#blok1,#blok2{
+    float: left;
+}
+#blok3{
+    clear: both;
+    float: left;    
+}
+#blok4{
+    float: left;
+}
+img{
+    padding: 3px;
+    margin: 10px;
+    border: dashed 2px slateblue;
+}
+a{
+    color: white;
+}
+button{
+    background-color: slateblue;
+    color: white;
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: indigo;
+}
+.range{
+    width: 80%;
+}

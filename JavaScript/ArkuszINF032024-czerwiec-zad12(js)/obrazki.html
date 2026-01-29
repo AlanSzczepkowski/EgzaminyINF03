@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header id="baner">
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <section id="blok1">
+        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="obraz1"><br>
+        <input type="radio" name="filtr" id="blur">Blur<br>
+        <input type="radio" name="filtr" id="sepia">Sepia<br>
+        <input type="radio" name="filtr" id="negatyw">Negatyw<br>
+        <button value="Zastosuj" onclick="Filtr()">Zastosuj</button>
+        <script>
+            function Filtr(){
+                var blur=document.getElementById("blur").checked;
+                var sepia=document.getElementById("sepia").checked;
+                var negatyw=document.getElementById("negatyw").checked;
+                if(blur==true)
+                {
+                    document.getElementById("obraz1").style.filter="blur(5px)";
+                }
+                else if(sepia==true){
+                    document.getElementById("obraz1").style.filter="sepia(100%)";
+                }
+                else if(negatyw==true)
+                {
+                    document.getElementById("obraz1").style.filter="invert(100%)";
+                }
+            }
+        </script>
+    </section>
+    <section id="blok2">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="obraz2"><br>
+        <button value="Kolorowy" onclick="Zmiana1()" id="kolorowy">Kolorowy</button>
+        <button value="Czarno-biały" onclick="Zmiana2()" id="czarno-bialy">Czarno-biały</button>
+        <script>
+            function Zmiana1()
+            {
+                document.getElementById("obraz2").style.filter="grayscale(0%)";
+            }
+            function Zmiana2()
+            {
+                 document.getElementById("obraz2").style.filter="grayscale(100%)"; 
+            }
+        </script>
+    </section>
+    <section id="blok3">
+        <img src="owoce.jpg" alt="Kosz pełen owoców"id="obraz3">
+        <input type="range" min="0" max="100" value="100" class="range" id="s1"><br>
+        <button onclick="Filtr2()">Zastosuj</button>
+        <script>
+            function Filtr2(){
+            var wartosc=document.getElementById("s1").value;
+            document.getElementById("obraz3").style.filter=`opacity(${wartosc}%)`;
+            }
+           
+        </script>
+    </section>
+    <section id="blok4">
+        <img src="zolw.jpg" alt="Żółw w wodzie"id="obraz4"><br>
+        <input type="range" min="0" max="250" class="range" id="s2" ><br>
+        <button onclick="Filtr3()">Zastosuj</button>
+        <script>
+            function Filtr3(){
+            var wartosc=document.getElementById("s2").value;
+            document.getElementById("obraz4").style.filter=`brightness(${wartosc})`;
+            }
+           
+        </script>
+    </section>
+    <footer id="stopka">
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+        <p>
+            Stronę wykonał: AS
+        </p>
+    </footer>
+</body>
+</html>
