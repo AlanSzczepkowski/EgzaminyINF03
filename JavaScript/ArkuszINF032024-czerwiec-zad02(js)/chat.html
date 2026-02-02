@@ -9,7 +9,7 @@
 <body>
     <script>
         function Chat(){
-            var         tekst=document.getElementById("tekst").value;
+            var tekst=document.getElementById("tekst").value;
             var chat=document.getElementById("chat");
             
             var sekcja=document.createElement("section");
@@ -24,7 +24,7 @@
             sekcja.appendChild(img);
             sekcja.appendChild(p);
             chat.appendChild(sekcja);
-                       sekcja.scrollIntoView({
+            sekcja.scrollIntoView({
             behavior: "smooth",
             block: "start"
             });

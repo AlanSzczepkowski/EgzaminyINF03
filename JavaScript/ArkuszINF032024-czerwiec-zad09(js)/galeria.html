@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header id="baner">
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+    <section id="lewy">
+        <button onclick="Wstecz()">&lt;</button>
+    </section>
+    <section id="srodkowy">
+        <img src="1.jpg" alt="Aktywne zdjęcie" id="zdjecie">
+        <script>
+            var i=1;
+            function Wstecz(){
+                var zdjecie=document.getElementById("zdjecie");
+                i++;
+                if(i>7)
+                {
+                    i=1;
+                }
+                zdjecie.src=`${i}.jpg`;
+            }
+            function Naprzod(){
+                var zdjecie=document.getElementById("zdjecie");
+                i--;
+                if(i<1)
+                {
+                    i=7;
+                }
+                zdjecie.src=`${i}.jpg`;
+            }
+        </script>
+    </section>
+    <section id="prawy">
+ <button onclick="Naprzod()">&gt;</button>
+    </section>
+    <section id="miniatur">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Nidzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska Poręba">
+        <img src="6.jpg" alt="Tatry">
+        <img src="7.jpg" alt="Wrocław">
+    </section>
+    <footer id="stopka">
+        <h3>Autorem galerii jest:</h3>
+        <p>AS</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+    </footer>
+</body>
+</html>
